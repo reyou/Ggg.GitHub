@@ -60,6 +60,10 @@
     <Compile Include="FileSamples\GggFileSamplesIntTests.cs" />
     <Compile Include="FileStreamSamples\GggFileStream.cs" />
     <Compile Include="FileStreamSamples\GggFileStreamIntTests.cs" />
+    <Compile Include="SecuritySamples\hmacsha256\GggHMACSHA256Provider.cs" />
+    <Compile Include="SecuritySamples\hmacsha256\GggHmacsha256ProviderTests.cs" />
+    <Compile Include="SecuritySamples\hmacsha256\HMACSHA256example.cs" />
+    <Compile Include="SecuritySamples\hmacsha256\Hmacsha256SamplesTests.cs" />
     <Compile Include="Utilities\GggTestUtilities.cs" />
     <Compile Include="HttpSamples\GggHttp.cs" />
     <Compile Include="HttpSamples\GggHttpIntTests.cs" />
