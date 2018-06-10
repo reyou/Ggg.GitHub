@@ -19,13 +19,7 @@ namespace GggImageSharp.GettingStarted
         [TestMethod]
         public void Template()
         {
-            WebClient client = new WebClient();
-            string address = "";
-            Stream inputStream = client.DownloadData(address);
-            using (IImageInfo imageInfo = Image.Identify(inputStream))
-            {
-                Debug.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
-            }
+
         }
 
         /// <summary>
@@ -35,7 +29,12 @@ namespace GggImageSharp.GettingStarted
         [TestMethod]
         public void MetaDecoding()
         {
-
+            WebClient client = new WebClient();
+            string address = "https://raw.githubusercontent.com/reyou/Ggg.Csharp/master/apps/app-ImageSharp/GggImageSharp/images/metaData.jpg";
+            byte[] bytes = client.DownloadData(address);
+            Stream inputStream = new MemoryStream(bytes);
+            IImageInfo imageInfo = Image.Identify(inputStream);
+            Trace.WriteLine($"{imageInfo.Width}x{imageInfo.Height} | BPP: {imageInfo.PixelType.BitsPerPixel}");
         }
 
         /// <summary>

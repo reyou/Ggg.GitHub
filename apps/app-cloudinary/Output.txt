@@ -1,0 +1,4 @@
+https://res.cloudinary.com/foodception/video/upload/v1528648679/my_folder/my_sub_folder/my_dog.mp4
+
+<img src="https://res.cloudinary.com/foodception/image/upload/e_sepia,g_face,h_150,r_20,w_150/e_brightness:200,g_south_east,l_cloudinary_icon,o_60,x_5,y_5/a_10/front_face.png"/>
+
