@@ -40,5 +40,10 @@ namespace GggCloudinary
             string path = @"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\GggCloudinary\TestOutputs\" + fileName;
             File.WriteAllText(path, serializeObject);
         }
+
+        public static string GetImagesFolder()
+        {
+            return @"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\images";
+        }
     }
 }

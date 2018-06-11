@@ -1,0 +1,28 @@
+{
+  "width": 40,
+  "height": 27,
+  "exif": null,
+  "image_metadata": null,
+  "faces": null,
+  "colors": null,
+  "phash": null,
+  "delete_token": null,
+  "info": null,
+  "pages": 1,
+  "signature": "9b594c919656b678614440173fc62b16ce73270e",
+  "resource_type": "image",
+  "moderation": null,
+  "created_at": "2018-06-11T02:20:14Z",
+  "tags": [
+    "special",
+    "for_homepage"
+  ],
+  "access_control": null,
+  "public_id": "sample_id",
+  "version": "1528683614",
+  "url": "http://res.cloudinary.com/foodception/image/upload/v1528683614/sample_id.jpg",
+  "secure_url": "https://res.cloudinary.com/foodception/image/upload/v1528683614/sample_id.jpg",
+  "bytes": 767,
+  "format": "jpg",
+  "error": null
+}

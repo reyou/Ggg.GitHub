@@ -1,11 +1,9 @@
 using System.Diagnostics;
-using System.IO;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Newtonsoft.Json;
 
-namespace GggCloudinary
+namespace GggCloudinary.Overview
 {
     [TestClass]
     public class OverviewTests
@@ -58,7 +56,7 @@ namespace GggCloudinary
                 .Transform(transformation)
                 .Secure()
                 .BuildImageTag("front_face.png");
-            Trace.Write(buildImageTag);
+            TestUtilities.LogAndWrite(buildImageTag, "ImageTransformation.txt");
         }
     }
 }
