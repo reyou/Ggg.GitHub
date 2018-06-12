@@ -1,0 +1,8 @@
+{
+  "deleted": {
+    "zombie": "deleted"
+  },
+  "next_cursor": null,
+  "partial": false,
+  "error": null
+}

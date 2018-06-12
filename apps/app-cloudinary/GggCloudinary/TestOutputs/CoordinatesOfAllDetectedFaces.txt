@@ -1,0 +1,291 @@
+{
+  "width": 400,
+  "height": 300,
+  "exif": {
+    "ApertureValue": "4/1",
+    "Artist": "Aldo Murillo",
+    "DateTime": "2011:06:03 14:50:11",
+    "DateTimeDigitized": "2011:03:17 16:03:54",
+    "DateTimeOriginal": "2011:03:17 16:03:54",
+    "ExifOffset": "232",
+    "ExifVersion": "48, 50, 49, 48",
+    "ExposureProgram": "1",
+    "ExposureTime": "1/320",
+    "FNumber": "4/1",
+    "FocalLength": "100/1",
+    "ISOSpeedRatings": "100",
+    "Make": "Hasselblad",
+    "MeteringMode": "3",
+    "Model": "Hasselblad H4D-40",
+    "ResolutionUnit": "2",
+    "ShutterSpeedValue": "8321928/1000000",
+    "Software": "Adobe Photoshop CS5 Macintosh",
+    "Compression": "6",
+    "JPEGInterchangeFormat": "556",
+    "JPEGInterchangeFormatLength": "16344",
+    "XResolution": "240/1",
+    "YResolution": "240/1"
+  },
+  "image_metadata": {
+    "ApplicationRecordVersion": "2",
+    "By-line": "Aldo Murillo",
+    "Make": "Hasselblad",
+    "Model": "Hasselblad H4D-40",
+    "ResolutionUnit": "inches",
+    "Software": "Adobe Photoshop CS5 Macintosh",
+    "ModifyDate": "2011:06:03 14:50:11",
+    "Artist": "Aldo Murillo",
+    "ExposureTime": "1/320",
+    "FNumber": "4.0",
+    "ExposureProgram": "Manual",
+    "ISO": "100",
+    "SensitivityType": "Unknown",
+    "ExifVersion": "0210",
+    "DateTimeOriginal": "2011:03:17 16:03:54",
+    "CreateDate": "2011:03:17 16:03:54",
+    "ShutterSpeedValue": "1/320",
+    "ApertureValue": "4.0",
+    "MeteringMode": "Spot",
+    "FocalLength": "100.0 mm",
+    "Compression": "JPEG (old-style)",
+    "ThumbnailOffset": "17094",
+    "ThumbnailLength": "16344",
+    "XMPToolkit": "Adobe XMP Core 4.2-c020 1.124078, Tue Sep 11 2007 23:21:40",
+    "Format": "application/vnd.adobe.photoshop",
+    "DateCreated": "2011:03:17 16:03:54",
+    "LegacyIPTCDigest": "B8E73852EFAB40E65D8C964959269EC4",
+    "MetadataDate": "2011:06:03 11:48:49-05:00",
+    "CreatorTool": "Adobe Photoshop Lightroom 3.3",
+    "InstanceID": "xmp.iid:6E8E7CEFC02068118F62AFB980B48057",
+    "DocumentID": "xmp.did:EB428A952020681195FEA8F9FD598068",
+    "OriginalDocumentID": "xmp.did:EB428A952020681195FEA8F9FD598068",
+    "ImageWidth": "7304",
+    "ImageHeight": "5478",
+    "DateTimeDigitized": "2011:03:17 16:03:54-06:00",
+    "ExifImageWidth": "7304",
+    "ExifImageHeight": "5478",
+    "Version": "6.3",
+    "ProcessVersion": "5.7",
+    "WhiteBalance": "As Shot",
+    "IncrementalTemperature": "0",
+    "IncrementalTint": "0",
+    "Exposure": "0.0",
+    "Shadows": "0",
+    "Brightness": "0",
+    "Contrast": "0",
+    "Saturation": "0",
+    "Sharpness": "0",
+    "LuminanceSmoothing": "0",
+    "ColorNoiseReduction": "0",
+    "ChromaticAberrationR": "0",
+    "ChromaticAberrationB": "0",
+    "VignetteAmount": "0",
+    "ShadowTint": "0",
+    "RedHue": "0",
+    "RedSaturation": "0",
+    "GreenHue": "0",
+    "GreenSaturation": "0",
+    "BlueHue": "0",
+    "BlueSaturation": "0",
+    "FillLight": "0",
+    "Vibrance": "0",
+    "HighlightRecovery": "0",
+    "Clarity": "0",
+    "Defringe": "0",
+    "HueAdjustmentRed": "0",
+    "HueAdjustmentOrange": "0",
+    "HueAdjustmentYellow": "0",
+    "HueAdjustmentGreen": "0",
+    "HueAdjustmentAqua": "0",
+    "HueAdjustmentBlue": "0",
+    "HueAdjustmentPurple": "0",
+    "HueAdjustmentMagenta": "0",
+    "SaturationAdjustmentRed": "0",
+    "SaturationAdjustmentOrange": "0",
+    "SaturationAdjustmentYellow": "0",
+    "SaturationAdjustmentGreen": "0",
+    "SaturationAdjustmentAqua": "0",
+    "SaturationAdjustmentBlue": "0",
+    "SaturationAdjustmentPurple": "0",
+    "SaturationAdjustmentMagenta": "0",
+    "LuminanceAdjustmentRed": "0",
+    "LuminanceAdjustmentOrange": "0",
+    "LuminanceAdjustmentYellow": "0",
+    "LuminanceAdjustmentGreen": "0",
+    "LuminanceAdjustmentAqua": "0",
+    "LuminanceAdjustmentBlue": "0",
+    "LuminanceAdjustmentPurple": "0",
+    "LuminanceAdjustmentMagenta": "0",
+    "SplitToningShadowHue": "0",
+    "SplitToningShadowSaturation": "0",
+    "SplitToningHighlightHue": "0",
+    "SplitToningHighlightSaturation": "0",
+    "SplitToningBalance": "0",
+    "ParametricShadows": "0",
+    "ParametricDarks": "0",
+    "ParametricLights": "0",
+    "ParametricHighlights": "0",
+    "ParametricShadowSplit": "25",
+    "ParametricMidtoneSplit": "50",
+    "ParametricHighlightSplit": "75",
+    "SharpenRadius": "+1.0",
+    "SharpenDetail": "25",
+    "SharpenEdgeMasking": "0",
+    "PostCropVignetteAmount": "0",
+    "GrainAmount": "0",
+    "LensProfileEnable": "0",
+    "LensManualDistortionAmount": "0",
+    "PerspectiveVertical": "0",
+    "PerspectiveHorizontal": "0",
+    "PerspectiveRotate": "0.0",
+    "PerspectiveScale": "100",
+    "ConvertToGrayscale": "false",
+    "ToneCurveName": "Linear",
+    "CameraProfile": "Embedded",
+    "CameraProfileDigest": "54650A341B5B5CCAE8442D0B43A92BCE",
+    "LensProfileSetup": "LensDefaults",
+    "HasSettings": "true",
+    "HasCrop": "false",
+    "AlreadyApplied": "true",
+    "Creator": "Aldo Murillo",
+    "CreatorAddress": "Basan 204\nCol. Maranatha",
+    "CreatorCity": "Montemorelos",
+    "CreatorRegion": "Nuevo León",
+    "CreatorPostalCode": "67530",
+    "CreatorCountry": "Mexico",
+    "CreatorWorkTelephone": "8262672273",
+    "CreatorWorkEmail": "aldo@capturasv.com",
+    "HistoryAction": "saved, saved, saved, saved",
+    "HistoryInstanceID": "xmp.iid:EB428A952020681195FEA8F9FD598068, xmp.iid:EC428A952020681195FEA8F9FD598068, xmp.iid:0A801174072068118F62AFB980B48057, xmp.iid:6E8E7CEFC02068118F62AFB980B48057",
+    "HistoryWhen": "2011:05:19 16:33:36-05:00, 2011:05:19 16:46:30-05:00, 2011:06:02 14:22:57-05:00, 2011:06:03 11:48:49-05:00",
+    "HistorySoftwareAgent": "Adobe Photoshop CS5 Macintosh, Adobe Photoshop CS5 Macintosh, Adobe Photoshop CS5 Macintosh, Adobe Photoshop CS5 Macintosh",
+    "HistoryChanged": "/, /, /, /",
+    "ToneCurve": "0, 0, 255, 255",
+    "JFIFVersion": "1.01",
+    "XResolution": "240",
+    "DisplayedUnitsX": "inches",
+    "YResolution": "240",
+    "DisplayedUnitsY": "inches",
+    "IPTCDigest": "b8e73852efab40e65d8c964959269ec4",
+    "ProfileDescription": "sRGB IEC61966-2.1",
+    "Colorspace": "RGB",
+    "DPI": "240"
+  },
+  "faces": [
+    [
+      93,
+      73,
+      65,
+      87
+    ],
+    [
+      137,
+      129,
+      56,
+      74
+    ]
+  ],
+  "colors": [
+    [
+      "#5A8206",
+      "22.3"
+    ],
+    [
+      "#142F02",
+      "12.3"
+    ],
+    [
+      "#243D04",
+      "8.4"
+    ],
+    [
+      "#6D8937",
+      "7.0"
+    ],
+    [
+      "#A7C257",
+      "6.2"
+    ],
+    [
+      "#E0EBEF",
+      "6.0"
+    ],
+    [
+      "#D8E48A",
+      "5.9"
+    ],
+    [
+      "#E0D6CB",
+      "4.4"
+    ],
+    [
+      "#CA9A73",
+      "4.1"
+    ],
+    [
+      "#82643C",
+      "3.2"
+    ],
+    [
+      "#8DB40C",
+      "3.0"
+    ],
+    [
+      "#ACC9B8",
+      "2.2"
+    ],
+    [
+      "#8A6141",
+      "2.0"
+    ],
+    [
+      "#567E3E",
+      "1.9"
+    ],
+    [
+      "#D2AC7F",
+      "1.4"
+    ],
+    [
+      "#35421F",
+      "1.4"
+    ],
+    [
+      "#E9EAED",
+      "1.0"
+    ],
+    [
+      "#838A4E",
+      "0.8"
+    ],
+    [
+      "#768E78",
+      "0.5"
+    ],
+    [
+      "#8F847A",
+      "0.5"
+    ],
+    [
+      "#305F09",
+      "0.5"
+    ]
+  ],
+  "phash": null,
+  "delete_token": null,
+  "info": null,
+  "pages": 1,
+  "signature": "f66c54ded6753b036675fccefe915c6f63e193a0",
+  "resource_type": "image",
+  "moderation": null,
+  "created_at": "2018-06-12T02:45:13Z",
+  "tags": [],
+  "access_control": null,
+  "public_id": "iky87zlmfqwg1wxo94jq",
+  "version": "1528771513",
+  "url": "http://res.cloudinary.com/foodception/image/upload/v1528771513/iky87zlmfqwg1wxo94jq.jpg",
+  "secure_url": "https://res.cloudinary.com/foodception/image/upload/v1528771513/iky87zlmfqwg1wxo94jq.jpg",
+  "bytes": 206960,
+  "format": "jpg",
+  "error": null
+}

@@ -1,0 +1,27 @@
+{
+  "width": 0,
+  "height": 0,
+  "exif": null,
+  "image_metadata": null,
+  "faces": null,
+  "colors": null,
+  "phash": null,
+  "delete_token": null,
+  "info": null,
+  "pages": 0,
+  "signature": null,
+  "resource_type": null,
+  "moderation": null,
+  "created_at": "0001-01-01T00:00:00",
+  "tags": null,
+  "access_control": null,
+  "public_id": null,
+  "version": null,
+  "url": null,
+  "secure_url": null,
+  "bytes": 0,
+  "format": null,
+  "error": {
+    "message": "Unknown transformation jpg_with_quality_30"
+  }
+}

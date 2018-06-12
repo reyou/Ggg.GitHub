@@ -29,7 +29,7 @@ namespace GggCloudinary.Overview
         [TestMethod]
         public void FileUpload()
         {
-            VideoUploadParams uploadParams = new VideoUploadParams()
+            VideoUploadParams uploadParams = new VideoUploadParams
             {
                 File = new FileDescription(@"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\videos\dog.mp4"),
                 PublicId = "my_folder/my_sub_folder/my_dog",

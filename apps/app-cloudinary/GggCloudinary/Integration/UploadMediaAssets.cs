@@ -59,7 +59,7 @@ namespace GggCloudinary.Integration
         public void RemoteUrl()
         {
             Cloudinary cloudinary = TestUtilities.GetCloudinary();
-            ImageUploadParams uploadParams = new ImageUploadParams()
+            ImageUploadParams uploadParams = new ImageUploadParams
             {
                 File = new FileDescription(@"https://images.pexels.com/photos/906982/pexels-photo-906982.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
             };
@@ -74,7 +74,7 @@ namespace GggCloudinary.Integration
         public void UploadLocalFile()
         {
             Cloudinary cloudinary = TestUtilities.GetCloudinary();
-            ImageUploadParams uploadParams = new ImageUploadParams()
+            ImageUploadParams uploadParams = new ImageUploadParams
             {
                 File = new FileDescription(TestUtilities.GetImagesFolder() + @"\mypicture.jpg")
             };

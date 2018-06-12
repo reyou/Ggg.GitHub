@@ -1,0 +1,1 @@
+"http://res.cloudinary.com/foodception/image/upload/c_thumb,g_face,h_100,w_150/EagerTransformations"

@@ -1,0 +1,15 @@
+{
+  "signature": "6405362a56543be4b117d2ea17344b4a48564d3d",
+  "resource_type": "raw",
+  "moderation": null,
+  "created_at": "2018-06-12T02:48:01Z",
+  "tags": [],
+  "access_control": null,
+  "public_id": "sample_spreadsheet.xls",
+  "version": "1528771681",
+  "url": "http://res.cloudinary.com/foodception/raw/upload/v1528771681/sample_spreadsheet.xls",
+  "secure_url": "https://res.cloudinary.com/foodception/raw/upload/v1528771681/sample_spreadsheet.xls",
+  "bytes": 11264,
+  "format": null,
+  "error": null
+}

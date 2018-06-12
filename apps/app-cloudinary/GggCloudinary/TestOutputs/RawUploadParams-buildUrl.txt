@@ -1,0 +1,1 @@
+"http://res.cloudinary.com/foodception/raw/upload/sample_spreadsheet2.xls"
