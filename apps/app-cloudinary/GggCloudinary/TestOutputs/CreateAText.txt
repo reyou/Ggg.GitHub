@@ -1,0 +1,5 @@
+{
+  "width": 78,
+  "height": 10,
+  "error": null
+}

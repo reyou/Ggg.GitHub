@@ -18,6 +18,24 @@ namespace GggCloudinary.dotnet_image_upload
 
         }
 
+        /// <summary>
+        /// https://cloudinary.com/documentation/dotnet_image_upload#rename_images
+        /// You can rename images uploaded to Cloudinary. Renaming means changing 
+        /// the public ID of already uploaded images. The following methods allows 
+        /// renaming a public ID:
+        /// </summary>
+        [TestMethod]
+        public void RenameImage()
+        {
+            Cloudinary cloudinary = TestUtilities.GetCloudinary();
+            TestUtilities.UploadImageWithName("renameSample", "https://c.pxhere.com/images/2c/4a/a103357d600dd68d0b28ca6b5135-1432179.jpg!d");
+            /*By default, Cloudinary prevents renaming to an already taken public ID.
+             You can set the overwrite parameter to true to delete the image that has 
+             the target public ID and replace it with the image being renamed:*/
+            RenameResult renameResult = cloudinary.Rename("renameSample", "bee", true);
+            TestUtilities.LogAndWrite(renameResult, "RenameResult.txt");
+        }
+
 
         /// <summary>
         /// generate transformed versions
@@ -47,7 +65,7 @@ namespace GggCloudinary.dotnet_image_upload
         [TestMethod]
         public void ForcingCacheInvalidation()
         {
-            UploadZombieImage();
+            TestUtilities.UploadImageWithName();
             Debugger.Break();
             Cloudinary cloudinary = TestUtilities.GetCloudinary();
             DelResParams delParams = new DelResParams
@@ -66,23 +84,12 @@ namespace GggCloudinary.dotnet_image_upload
         public void DeleteResources()
         {
             Cloudinary cloudinary = TestUtilities.GetCloudinary();
-            UploadZombieImage();
+            TestUtilities.UploadImageWithName();
             Debugger.Break();
             DelResResult delResResult = cloudinary.DeleteResources("zombie");
             TestUtilities.LogAndWrite(delResResult, "DeleteResources.txt");
         }
 
-        private void UploadZombieImage()
-        {
-            Cloudinary cloudinary = TestUtilities.GetCloudinary();
-            ImageUploadParams uploadParams = new ImageUploadParams
-            {
-                File = new FileDescription("https://c.pxhere.com/photos/90/4b/carnival_venice_eyes_mask_woman-947285.jpg!d"),
-                PublicId = "zombie",
-                Invalidate = true
-            };
-            ImageUploadResult uploadResult = cloudinary.Upload(uploadParams);
-            TestUtilities.LogAndWrite(uploadResult, "UploadZombieImage.txt");
-        }
+
     }
 }

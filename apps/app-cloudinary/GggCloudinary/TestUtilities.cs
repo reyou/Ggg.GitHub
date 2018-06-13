@@ -45,5 +45,18 @@ namespace GggCloudinary
         {
             return @"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\images";
         }
+
+        public static void UploadImageWithName(string name = "zombie", string url = "https://c.pxhere.com/photos/90/4b/carnival_venice_eyes_mask_woman-947285.jpg!d")
+        {
+            Cloudinary cloudinary = GetCloudinary();
+            ImageUploadParams uploadParams = new ImageUploadParams
+            {
+                File = new FileDescription(url),
+                PublicId = name,
+                Invalidate = true
+            };
+            ImageUploadResult uploadResult = cloudinary.Upload(uploadParams);
+            LogAndWrite(uploadResult, "UploadImageWithName.txt");
+        }
     }
 }
