@@ -45,6 +45,10 @@ namespace GggCloudinary
         {
             return @"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\images";
         }
+        public static string GetVideosFolder()
+        {
+            return @"D:\Git\Ggg.Github\Ggg.Csharp\apps\app-cloudinary\videos";
+        }
 
         public static void UploadImageWithName(string name = "zombie", string url = "https://c.pxhere.com/photos/90/4b/carnival_venice_eyes_mask_woman-947285.jpg!d")
         {

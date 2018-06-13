@@ -1,0 +1,1 @@
+"<input type='file' name='file' data-url='https://api.cloudinary.com/v1_1/foodception/video/upload' data-form-data='{\"public_id\":\"my_video\",\"tags\":\"user_218,screencast\",\"unsigned\":true,\"upload_preset\":\"my_upload_preset\"}' data-cloudinary-field='video_id' class='cloudinary-fileupload'/>"

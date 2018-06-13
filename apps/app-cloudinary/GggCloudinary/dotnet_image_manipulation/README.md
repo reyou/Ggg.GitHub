@@ -1,0 +1,1 @@
+﻿https://cloudinary.com/documentation/dotnet_image_manipulation
