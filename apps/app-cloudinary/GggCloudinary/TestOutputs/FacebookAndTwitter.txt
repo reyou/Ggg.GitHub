@@ -1,0 +1,1 @@
+"<img src=\"http://res.cloudinary.com/foodception/image/facebook/c_fill,g_face,h_98,w_90/billclinton.jpg\" width=\"90\" height=\"98\"/>"

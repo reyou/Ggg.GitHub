@@ -1,0 +1,1 @@
+"https://res.cloudinary.com/foodception/image/upload/c_fill,h_150,w_100/sample.jpg"

@@ -1,0 +1,1 @@
+"<img src=\"http://res.cloudinary.com/foodception/image/fetch/c_fill,f_jpg,h_150,w_150/http://upload.wikimedia.org/wikipedia/commons/e/e4/Globe.png\" width=\"150\" height=\"150\"/>"

@@ -1,0 +1,1 @@
+"<img src=\"http://res.cloudinary.com/foodception/image/upload/c_scale,h_150,w_100/sample.jpg\" width=\"100\" height=\"150\"/>"

@@ -3,3 +3,14 @@ https://didyoureadme.azurewebsites.net/UserUrls/TagUrls?TagName=cloudinary&UserU
 .NET integration
 https://cloudinary.com/documentation/dotnet_integration
 https://cloudinary.com/console
+//=============================================================================
+/// <summary>
+/// template
+/// </summary>
+[TestMethod]
+public void Template()
+{
+    Cloudinary cloudinary = TestUtilities.GetCloudinary();
+    TestUtilities.LogAndWrite(null, "Template.txt");
+}
+//=============================================================================

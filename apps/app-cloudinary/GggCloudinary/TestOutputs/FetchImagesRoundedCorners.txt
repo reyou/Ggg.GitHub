@@ -1,0 +1,1 @@
+"<img src=\"http://res.cloudinary.com/foodception/image/fetch/c_thumb,g_face,h_150,r_20,w_150/http://upload.wikimedia.org/wikipedia/commons/4/46/Jennifer_Lawrence_at_the_83rd_Academy_Awards.jpg\" width=\"150\" height=\"150\"/>"
