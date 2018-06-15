@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using CloudinaryDotNet;
@@ -61,6 +62,25 @@ namespace GggCloudinary
             };
             ImageUploadResult uploadResult = cloudinary.Upload(uploadParams);
             LogAndWrite(uploadResult, "UploadImageWithName.txt");
+        }
+
+        public static VideoUploadResult UploadVideo()
+        {
+            Cloudinary cloudinary = GetCloudinary();
+            VideoUploadParams uploadParams = new VideoUploadParams()
+            {
+                File = new FileDescription(GetVideosFolder() + @"\dog.mp4"),
+                PublicId = "dog",
+                EagerTransforms = new List<Transformation>()
+                {
+                    new Transformation().Width(300).Height(300).Crop("pad").AudioCodec("none"),
+                    new Transformation().Width(160).Height(100).Crop("crop").Gravity("south").AudioCodec("none"),
+                },
+                EagerAsync = true,
+                EagerNotificationUrl = "https://requestbin.fullcontact.com/1964k7d1"
+            };
+            VideoUploadResult uploadResult = cloudinary.Upload(uploadParams);
+            return uploadResult;
         }
     }
 }

@@ -1,0 +1,33 @@
+{
+  "width": 480,
+  "height": 270,
+  "video": {
+    "pix_format": "yuv420p",
+    "codec": "h264",
+    "level": 21,
+    "bit_rate": 818071
+  },
+  "audio": {
+    "codec": "aac",
+    "bit_rate": 132327,
+    "frequency": 44100,
+    "channels": 2,
+    "channel_layout": "stereo"
+  },
+  "frame_rate": 30.0,
+  "bit_rate": 961492,
+  "duration": 44.6,
+  "signature": "6d502e16159b8251692023bb30edc387df380a72",
+  "resource_type": "video",
+  "moderation": null,
+  "created_at": "2018-06-15T01:28:28Z",
+  "tags": [],
+  "access_control": null,
+  "public_id": "dog",
+  "version": "1529026108",
+  "url": "http://res.cloudinary.com/foodception/video/upload/v1529026108/dog.mp4",
+  "secure_url": "https://res.cloudinary.com/foodception/video/upload/v1529026108/dog.mp4",
+  "bytes": 5360323,
+  "format": "mp4",
+  "error": null
+}
