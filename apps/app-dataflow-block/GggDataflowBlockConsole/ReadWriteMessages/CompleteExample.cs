@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
@@ -9,6 +7,7 @@ namespace GggDataflowBlockConsole
     /// <summary>
     /// The following example shows the complete code for this document.
     /// https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/how-to-write-messages-to-and-read-messages-from-a-dataflow-block#a-complete-example
+    /// https://github.com/reyou/Ggg.Csharp/wiki/dataflow-task-parallel-library
     /// </summary>
     class CompleteExample
     {
