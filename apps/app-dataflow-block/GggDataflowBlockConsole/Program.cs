@@ -1,10 +1,10 @@
 ﻿// ReSharper disable RedundantUsingDirective
+using GggDataflowBlockConsole.CreatingADataflowPipeline;
 using GggDataflowBlockConsole.DataflowBlockReceivesData;
+using GggDataflowBlockConsole.DataFlowMain.ExecutionBlocks;
+using GggDataflowBlockConsole.UnlinkDataflowBlocks;
 using System;
 using System.Threading;
-using GggDataflowBlockConsole.DataFlowMain;
-using GggDataflowBlockConsole.DataFlowMain.ExecutionBlocks;
-using GggDataflowBlockConsole.DataFlowMain.GroupingBlocks;
 
 namespace GggDataflowBlockConsole
 {
@@ -12,7 +12,9 @@ namespace GggDataflowBlockConsole
     {
         static void Main(string[] args)
         {
-            GroupingBlocks();
+            UnlinkDataflowBlocks();
+            // CreatingADataflowPipeline();
+            // GroupingBlocks();
             // ExecutionBlocks();
             // BufferingBlocks();
             // DataflowMain();
@@ -25,11 +27,21 @@ namespace GggDataflowBlockConsole
             Console.ReadLine();
         }
 
+        private static void UnlinkDataflowBlocks()
+        {
+            DataflowReceiveAny.Run();
+        }
+
+        private static void CreatingADataflowPipeline()
+        {
+            CreatingADataflowPipelineProgram.Run();
+        }
+
         private static void GroupingBlocks()
         {
             // BatchBlockExample.Run();
-            //JoinBlockExample.Run();
-            BatchedJoinBlockExample.Run();
+            // JoinBlockExample.Run();
+            // BatchedJoinBlockExample.Run();
         }
 
         private static void ExecutionBlocks()

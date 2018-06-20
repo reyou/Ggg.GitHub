@@ -43,14 +43,14 @@ namespace GggDataflowBlockConsole.DataFlowMain.BufferingBlocks
 
             Task task1 = Task.Run(() =>
             {
-                while (bufferBlock.TryReceive(out var item))
+                while (bufferBlock.TryReceive(out int item))
                 {
                     Console.WriteLine("Worker 1 received: " + item + " ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 }
             });
             Task task2 = Task.Run(() =>
             {
-                while (bufferBlock.TryReceive(out var item))
+                while (bufferBlock.TryReceive(out int item))
                 {
                     Console.WriteLine("Worker 2 received: " + item + " ThreadId: " + Thread.CurrentThread.ManagedThreadId);
                 }

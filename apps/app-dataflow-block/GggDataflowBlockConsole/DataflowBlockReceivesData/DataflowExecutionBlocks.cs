@@ -34,7 +34,7 @@ namespace GggDataflowBlockConsole.DataflowBlockReceivesData
             // Create a temporary file on disk.
             string tempFile = Path.GetTempFileName();
             // Write random data to the temporary file.
-            using (var fileStream = File.OpenWrite(tempFile))
+            using (FileStream fileStream = File.OpenWrite(tempFile))
             {
                 Random rand = new Random();
                 byte[] buffer = new byte[1024];
