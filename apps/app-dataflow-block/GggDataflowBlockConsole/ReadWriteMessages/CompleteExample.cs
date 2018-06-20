@@ -2,7 +2,7 @@
 using System.Threading.Tasks;
 using System.Threading.Tasks.Dataflow;
 
-namespace GggDataflowBlockConsole
+namespace GggDataflowBlockConsole.ReadWriteMessages
 {
     /// <summary>
     /// The following example shows the complete code for this document.

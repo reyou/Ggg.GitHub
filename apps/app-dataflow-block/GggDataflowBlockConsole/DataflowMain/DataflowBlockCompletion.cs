@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks.Dataflow;
 
-namespace GggDataflowBlockConsole.DataflowMain
+namespace GggDataflowBlockConsole.DataFlowMain
 {
     /// <summary>
     /// https://docs.microsoft.com/en-us/dotnet/standard/parallel-programming/dataflow-task-parallel-library#dataflow-block-completion
