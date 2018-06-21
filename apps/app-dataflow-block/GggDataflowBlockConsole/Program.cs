@@ -4,15 +4,23 @@ using GggDataflowBlockConsole.DataflowBlockReceivesData;
 using GggDataflowBlockConsole.DataFlowMain.ExecutionBlocks;
 using GggDataflowBlockConsole.UnlinkDataflowBlocks;
 using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Threading;
+using GggDataflowBlockConsole.CreatingACustomDataflowBlockType;
+using GggDataflowBlockConsole.SpecifyTheDegreeOfParallelism;
+using GggDataflowBlockConsole.UseJoinBlockToReadData;
 
 namespace GggDataflowBlockConsole
 {
+    [SuppressMessage("ReSharper", "UnusedMember.Local")]
     class Program
     {
         static void Main(string[] args)
         {
-            UnlinkDataflowBlocks();
+            SpecifyTheDegreeOfParallelism();
+            // UseJoinBlockToReadData();
+            // CreatingACustomDataflowBlockType();
+            // UnlinkDataflowBlocks();
             // CreatingADataflowPipeline();
             // GroupingBlocks();
             // ExecutionBlocks();
@@ -25,6 +33,21 @@ namespace GggDataflowBlockConsole
             Console.WriteLine("Main thread id: " + Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Main thread reached to end.");
             Console.ReadLine();
+        }
+
+        private static void SpecifyTheDegreeOfParallelism()
+        {
+            SpecifyTheDegreeOfParallelismExample.Run();
+        }
+
+        private static void UseJoinBlockToReadData()
+        {
+            JoinBlockToReadDataExample.Run();
+        }
+
+        private static void CreatingACustomDataflowBlockType()
+        {
+            DemonstrateSlidingWindowSample.Run();
         }
 
         private static void UnlinkDataflowBlocks()
