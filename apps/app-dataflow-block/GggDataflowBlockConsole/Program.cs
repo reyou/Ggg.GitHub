@@ -1,14 +1,15 @@
 ﻿// ReSharper disable RedundantUsingDirective
+using GggDataflowBlockConsole.CreatingACustomDataflowBlockType;
 using GggDataflowBlockConsole.CreatingADataflowPipeline;
 using GggDataflowBlockConsole.DataflowBlockReceivesData;
 using GggDataflowBlockConsole.DataFlowMain.ExecutionBlocks;
+using GggDataflowBlockConsole.SpecifyTheDegreeOfParallelism;
 using GggDataflowBlockConsole.UnlinkDataflowBlocks;
+using GggDataflowBlockConsole.UseJoinBlockToReadData;
+using GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock;
 using System;
 using System.Diagnostics.CodeAnalysis;
 using System.Threading;
-using GggDataflowBlockConsole.CreatingACustomDataflowBlockType;
-using GggDataflowBlockConsole.SpecifyTheDegreeOfParallelism;
-using GggDataflowBlockConsole.UseJoinBlockToReadData;
 
 namespace GggDataflowBlockConsole
 {
@@ -17,7 +18,8 @@ namespace GggDataflowBlockConsole
     {
         static void Main(string[] args)
         {
-            SpecifyTheDegreeOfParallelism();
+            UsingBatchBlockAndBatchedJoinBlock();
+            // SpecifyTheDegreeOfParallelism();
             // UseJoinBlockToReadData();
             // CreatingACustomDataflowBlockType();
             // UnlinkDataflowBlocks();
@@ -33,6 +35,11 @@ namespace GggDataflowBlockConsole
             Console.WriteLine("Main thread id: " + Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Main thread reached to end.");
             Console.ReadLine();
+        }
+
+        private static void UsingBatchBlockAndBatchedJoinBlock()
+        {
+            BatchBlockAndBatchedJoinBlockSample.Run();
         }
 
         private static void SpecifyTheDegreeOfParallelism()

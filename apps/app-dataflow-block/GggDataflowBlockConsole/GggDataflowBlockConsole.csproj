@@ -6,11 +6,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Security.Permissions" Version="4.5.0" />
     <PackageReference Include="System.Threading.Tasks.Dataflow" Version="4.9.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="CreatingADataflowPipeline\notes\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data.SqlServerCe">
+      <HintPath>Binaries\Private\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+    <Copy SourceFiles="Binaries\Private\amd64\sqlceca40.dll" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="Binaries\Private\amd64\sqlcecompact40.dll" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="Binaries\Private\amd64\sqlceer40EN.dll" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="Binaries\Private\amd64\sqlceme40.dll" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="Binaries\Private\amd64\sqlceqp40.dll" DestinationFolder="$(OutDir)" />
+    <Copy SourceFiles="Binaries\Private\amd64\sqlcese40.dll" DestinationFolder="$(OutDir)" />
+  </Target>
+
+
 
 </Project>

@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GggDataflowBlockWinForms", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GggDataflowBlockCancelWinForm", "GggDataflowBlockCancelWinForm\GggDataflowBlockCancelWinForm.csproj", "{5E907F93-EE30-4FAE-9629-318CB4BF1379}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GggDataflowBlockSpecifyTaskSchedulerWinForms", "GggDataflowBlockSpecifyTaskSchedulerWinForms\GggDataflowBlockSpecifyTaskSchedulerWinForms.csproj", "{D66703A2-57ED-43DE-829C-9A6894A86021}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{5E907F93-EE30-4FAE-9629-318CB4BF1379}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E907F93-EE30-4FAE-9629-318CB4BF1379}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E907F93-EE30-4FAE-9629-318CB4BF1379}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D66703A2-57ED-43DE-829C-9A6894A86021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D66703A2-57ED-43DE-829C-9A6894A86021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D66703A2-57ED-43DE-829C-9A6894A86021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D66703A2-57ED-43DE-829C-9A6894A86021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
