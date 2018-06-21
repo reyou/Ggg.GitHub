@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 
 namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
 {
@@ -7,6 +8,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
     // column in the Employees table in the Northwind database.
     // For brevity, the Employee class does not contain
     // all columns from the Employees table.
+    [SuppressMessage("ReSharper", "InconsistentNaming")]
     class Employee
     {
         public int EmployeeID { get; set; }
@@ -15,7 +17,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
 
         // A random number generator that helps tp generate
         // Employee property values.
-        static Random rand = new Random(42);
+        private static readonly Random rand = new Random(42);
 
         // Possible random first names.
         static readonly string[] firstNames = { "Tom", "Mike", "Ruth", "Bob", "John" };

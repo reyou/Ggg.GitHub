@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlServerCe;
 using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks.Dataflow;
@@ -21,129 +20,12 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
         // The source database file.
         // TODO: Change this value if Northwind.sdf is at a different location
         // on your computer.
-        static readonly string sourceDatabase =
-            @"C:\Temp\Northwind.sdf";
+        static readonly string sourceDatabase = @"C:\Temp\Northwind.sdf";
 
         // TODO: Change this value if you require a different temporary location.
-        static readonly string scratchDatabase =
-            @"C:\Temp\Northwind2.sdf";
+        static readonly string scratchDatabase = @"C:\Temp\Northwind2.sdf";
 
-        // Adds new employee records to the database.
-        static void InsertEmployees(Employee[] employees, string connectionString)
-        {
-            using (SqlCeConnection connection = new SqlCeConnection(connectionString))
-            {
-                try
-                {
-                    // Create the SQL command.
-                    SqlCeCommand command = new SqlCeCommand(
-                        "INSERT INTO Employees ([Last Name], [First Name])" +
-                        "VALUES (@lastName, @firstName)",
-                        connection);
 
-                    connection.Open();
-                    foreach (Employee employee in employees)
-                    {
-                        // Set parameters.
-                        command.Parameters.Clear();
-                        command.Parameters.AddWithValue("@lastName", employee.LastName);
-                        command.Parameters.AddWithValue("@firstName", employee.FirstName);
-
-                        // Execute the command.
-                        command.ExecuteNonQuery();
-                    }
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-        }
-
-        /// <summary>
-        /// Demonstrates how to upgrade a database with case sensitivity.
-        /// </summary>
-        public static void UpgradeDatabasewithCaseSensitive(string filePath)
-        {
-            // <Snippet2>
-            // Default case-insentive connection string.
-            // Note that Northwind.sdf is an old 3.1 version database.
-
-            string connStringCI = $"Data Source= {filePath}; LCID= 1033";
-
-            // Set "Case Sensitive" to true to change the collation from CI to CS.
-            string connStringCS = $"Data Source= {filePath}; LCID= 1033; Case Sensitive=true";
-
-            SqlCeEngine engine = new SqlCeEngine(connStringCI);
-
-            // The collation of the database will be case sensitive because of 
-            // the new connection string used by the Upgrade method.                
-            engine.Upgrade(connStringCS);
-
-            SqlCeConnection conn = null;
-            conn = new SqlCeConnection(connStringCI);
-            conn.Open();
-
-            //Retrieve the connection string information - notice the 'Case Sensitive' value.
-            List<KeyValuePair<string, string>> dbinfo = conn.GetDatabaseInfo();
-
-            Console.WriteLine("\nGetDatabaseInfo() results:");
-
-            foreach (KeyValuePair<string, string> kvp in dbinfo)
-            {
-                Console.WriteLine(kvp);
-            }
-
-            // </Snippet2>
-        }
-
-        // Retrieves the number of entries in the Employees table in 
-        // the Northwind database.
-        static int GetEmployeeCount(string connectionString)
-        {
-            // UpgradeDatabasewithCaseSensitive(@"C:\temp\Northwind.sdf");
-            int result = 0;
-            using (SqlCeConnection sqlConnection = new SqlCeConnection(connectionString))
-            {
-                SqlCeCommand sqlCommand = new SqlCeCommand("SELECT COUNT(*) FROM Employees", sqlConnection);
-
-                sqlConnection.Open();
-                try
-                {
-                    result = (int)sqlCommand.ExecuteScalar();
-                }
-                finally
-                {
-                    sqlConnection.Close();
-                }
-            }
-            return result;
-        }
-
-        // Retrieves the ID of the first employee that has the provided name.
-        static int GetEmployeeID(string lastName, string firstName, string connectionString)
-        {
-            using (SqlCeConnection connection =
-                new SqlCeConnection(connectionString))
-            {
-                SqlCeCommand command = new SqlCeCommand(
-                    string.Format(
-                        "SELECT [Employee ID] FROM Employees " +
-                        "WHERE [Last Name] = '{0}' AND [First Name] = '{1}'",
-                        lastName, firstName),
-                    connection);
-
-                connection.Open();
-                try
-                {
-                    return (int)command.ExecuteScalar();
-                }
-                finally
-                {
-                    connection.Close();
-                }
-            }
-        }
 
         // Posts random Employee data to the provided target block.
         static void PostRandomEmployees(ITargetBlock<Employee> target, int count)
@@ -163,7 +45,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
             // employee entry to the database.
             ActionBlock<Employee> insertEmployee = new ActionBlock<Employee>(e =>
             {
-                InsertEmployees(new[] { e }, connectionString);
+                DatabaseUtilities.InsertEmployees(new[] { e }, connectionString, "AddEmployees");
             });
 
             // Post several random Employee objects to the dataflow block.
@@ -188,7 +70,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
             // employee entries to the database.
             ActionBlock<Employee[]> insertEmployees = new ActionBlock<Employee[]>(a =>
             {
-                InsertEmployees(a, connectionString);
+                DatabaseUtilities.InsertEmployees(a, connectionString, "AddEmployeesBatched");
             });
 
             // Link the batch block to the action block.
@@ -256,7 +138,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
                     Employee e = Employee.Random();
 
                     // Try to retrieve the ID for the employee from the database.
-                    e.EmployeeID = GetEmployeeID(e.LastName, e.FirstName, connectionString);
+                    e.EmployeeID = DatabaseUtilities.GetEmployeeID(e.LastName, e.FirstName, connectionString);
 
                     // Post the Employee object to the Employee target of 
                     // the batched join block.
@@ -285,8 +167,7 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
         {
             // Create a connection string for accessing the database.
             // The connection string refers to the temporary database location.
-            string connectionString = string.Format(@"Data Source={0}",
-               scratchDatabase);
+            string connectionString = string.Format(@"Data Source={0}", scratchDatabase);
 
             // Create a Stopwatch object to time database insert operations.
             Stopwatch stopwatch = new Stopwatch();
@@ -297,13 +178,11 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
 
             // Demonstrate multiple insert operations without batching.
             Console.WriteLine("Demonstrating non-batched database insert operations...");
-            Console.WriteLine("Original size of Employee table: {0}.",
-               GetEmployeeCount(connectionString));
+            Console.WriteLine("Original size of Employee table: {0}.", DatabaseUtilities.GetEmployeeCount(connectionString));
             stopwatch.Start();
             AddEmployees(connectionString, insertCount);
             stopwatch.Stop();
-            Console.WriteLine("New size of Employee table: {0}; elapsed insert time: {1} ms.",
-               GetEmployeeCount(connectionString), stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("New size of Employee table: {0}; elapsed insert time: {1} ms.", DatabaseUtilities.GetEmployeeCount(connectionString), stopwatch.ElapsedMilliseconds);
 
             Console.WriteLine();
 
@@ -312,13 +191,11 @@ namespace GggDataflowBlockConsole.UsingBatchBlockAndBatchedJoinBlock
 
             // Demonstrate multiple insert operations, this time with batching.
             Console.WriteLine("Demonstrating batched database insert operations...");
-            Console.WriteLine("Original size of Employee table: {0}.",
-               GetEmployeeCount(connectionString));
+            Console.WriteLine("Original size of Employee table: {0}.", DatabaseUtilities.GetEmployeeCount(connectionString));
             stopwatch.Restart();
             AddEmployeesBatched(connectionString, insertBatchSize, insertCount);
             stopwatch.Stop();
-            Console.WriteLine("New size of Employee table: {0}; elapsed insert time: {1} ms.",
-               GetEmployeeCount(connectionString), stopwatch.ElapsedMilliseconds);
+            Console.WriteLine("New size of Employee table: {0}; elapsed insert time: {1} ms.", DatabaseUtilities.GetEmployeeCount(connectionString), stopwatch.ElapsedMilliseconds);
 
             Console.WriteLine();
 
