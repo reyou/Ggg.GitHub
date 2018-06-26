@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks.Dataflow;
 
 namespace GggDataflowBlockConsole.DataFlowMain.GroupingBlocks
@@ -30,25 +27,24 @@ namespace GggDataflowBlockConsole.DataFlowMain.GroupingBlocks
             // Provides a dataflow block that batches inputs into arrays
             // Below every batch will have 10 items.
             BatchBlock<int> batchBlock = new BatchBlock<int>(10);
-
+            Console.WriteLine("BatchBlock<int> batchBlock = new BatchBlock<int>(10);");
             // Post several values to the block.
             for (int i = 0; i < 13; i++)
             {
                 batchBlock.Post(i);
+                Console.WriteLine("Posted to batchBlock {0}.", i);
             }
 
             // Set the block to the completed state. This causes
             // the block to propagate out any any remaining
             // values as a final batch.
             batchBlock.Complete();
-
+            Console.WriteLine("batchBlock.Complete();");
             // Print the sum of both batches.
-
-            Console.WriteLine("The sum of the elements in batch 1 is {0}.", batchBlock.Receive().Sum());
-
-            Console.WriteLine("The sum of the elements in batch 2 is {0}.", batchBlock.Receive().Sum());
-
-
+            int length1 = batchBlock.Receive().Length;
+            int length2 = batchBlock.Receive().Length;
+            Console.WriteLine("The total element count in batch-1 is {0}.", length1);
+            Console.WriteLine("The total element count in batch-2 is {0}.", length2);
         }
     }
 }
