@@ -3,7 +3,7 @@ using System.Threading;
 using Serilog;
 using Serilog.Formatting.Compact;
 
-namespace SerilogConsoleApp.WritingLogEvents
+namespace SerilogConsoleApp
 {
     internal class TestUtilities
     {
