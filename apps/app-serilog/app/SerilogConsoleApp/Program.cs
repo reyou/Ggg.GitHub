@@ -17,8 +17,8 @@ namespace SerilogConsoleApp
             // GettingStarted();
             // StructuredData();
             // WritingLogEvents();
-            // FormattingOutput();
-            SerilogSinksElasticsearch();
+            FormattingOutput();
+            // SerilogSinksElasticsearch();
             Console.WriteLine();
             Console.WriteLine("===============================================");
             Console.WriteLine("Main program end.");
@@ -37,8 +37,8 @@ namespace SerilogConsoleApp
         private static void FormattingOutput()
         {
             // FormattingPlainTextExamples.Run();
-            FormattingJsonExamples.Run();
-            // FormatProvidersExamples.Run();
+            // FormattingJsonExamples.Run();
+            FormatProvidersExamples.Run();
             // FormatProvidersExamples.Run2();
         }
 

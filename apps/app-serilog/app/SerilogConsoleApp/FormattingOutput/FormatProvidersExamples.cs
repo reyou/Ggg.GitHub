@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Text;
+using System.Threading;
 using Serilog;
 
 namespace SerilogConsoleApp.FormattingOutput
@@ -22,7 +23,7 @@ namespace SerilogConsoleApp.FormattingOutput
                 .CreateLogger();
 
             User exampleUser = new User { Id = 1, Name = "Adam", Created = DateTime.Now };
-            Log.Information("Created {@User} on {Created}", exampleUser, DateTime.Now);
+            Log.Information("Created {@User} on {Created} {@Thread}", exampleUser, DateTime.Now, Thread.CurrentThread);
 
             Log.CloseAndFlush();
         }
