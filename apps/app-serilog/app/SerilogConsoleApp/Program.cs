@@ -17,8 +17,8 @@ namespace SerilogConsoleApp
             // GettingStarted();
             // StructuredData();
             // WritingLogEvents();
-            FormattingOutput();
-            // SerilogSinksElasticsearch();
+            // FormattingOutput();
+            SerilogSinksElasticsearch();
             Console.WriteLine();
             Console.WriteLine("===============================================");
             Console.WriteLine("Main program end.");
