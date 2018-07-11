@@ -3,6 +3,7 @@ using GggDataflowBlockConsole.CreatingACustomDataflowBlockType;
 using GggDataflowBlockConsole.CreatingADataflowPipeline;
 using GggDataflowBlockConsole.DataflowBlockReceivesData;
 using GggDataflowBlockConsole.DataFlowMain.ExecutionBlocks;
+using GggDataflowBlockConsole.ParallelProgramming;
 using GggDataflowBlockConsole.SpecifyTheDegreeOfParallelism;
 using GggDataflowBlockConsole.UnlinkDataflowBlocks;
 using GggDataflowBlockConsole.UseJoinBlockToReadData;
@@ -18,7 +19,8 @@ namespace GggDataflowBlockConsole
     {
         static void Main(string[] args)
         {
-            UsingBatchBlockAndBatchedJoinBlock();
+            ParallelProgramming();
+            // UsingBatchBlockAndBatchedJoinBlock();
             // SpecifyTheDegreeOfParallelism();
             // UseJoinBlockToReadData();
             // CreatingACustomDataflowBlockType();
@@ -35,6 +37,11 @@ namespace GggDataflowBlockConsole
             Console.WriteLine("Main thread id: " + Thread.CurrentThread.ManagedThreadId);
             Console.WriteLine("Main thread reached to end.");
             Console.ReadLine();
+        }
+
+        private static void ParallelProgramming()
+        {
+            WrapEapPatternsInATaskSample.Run();
         }
 
         private static void UsingBatchBlockAndBatchedJoinBlock()
