@@ -19,7 +19,7 @@ namespace GggDataflowBlockConsole
     {
         static void Main(string[] args)
         {
-            ParallelProgramming();
+            // ParallelProgramming();
             // UsingBatchBlockAndBatchedJoinBlock();
             // SpecifyTheDegreeOfParallelism();
             // UseJoinBlockToReadData();

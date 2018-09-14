@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Diagnostics;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks.Dataflow;
 
@@ -10,8 +9,14 @@ namespace GggDataflowBlockConsole.ActionBlockSample
     /// <summary>
     /// https://docs.microsoft.com/en-us/dotnet/api/system.threading.tasks.dataflow.actionblock-1?view=netcore-2.1
     /// </summary>
-    class ActionBlockSampleClass
+    [TestClass]
+    public class ActionBlockSampleClass
     {
+        [TestMethod]
+        public void MainTest()
+        {
+            Run();
+        }
         // Performs several computations by using dataflow and returns the elapsed
         // time required to perform the computations.
         static TimeSpan TimeDataflowComputations(int maxDegreeOfParallelism, int messageCount)
