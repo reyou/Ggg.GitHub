@@ -49,7 +49,7 @@ namespace GggFileWatcherConsole
             {
                 throw new InvalidOperationException("Directory does not exists: " + fileInfo.FullName);
             }
-
+            Console.WriteLine("[Watching]: " + fileInfo.FullName);
             initialFileSize = fileInfo.Length;
             lastReadLength = initialFileSize - 1024;
             if (lastReadLength < 0) lastReadLength = 0;
