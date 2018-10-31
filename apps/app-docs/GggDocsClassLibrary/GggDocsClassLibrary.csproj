@@ -45,33 +45,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Computers\BrandXComputer.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Factories\BrandXFactory.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Abstracts\Computer.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\ComputerAssembler.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Abstracts\ComputerFactory.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Computers\ConcreteComputer.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\msdnSample\Factories\ConcreteComputerFactory.cs" />
-    <Compile Include="DesignPatterns\FactoryPattern\FactoryPatternTests.cs" />
-    <Compile Include="ExceptionSamples\FileUtilities.cs" />
-    <Compile Include="ExceptionSamples\GggNotSupportedException.cs" />
-    <Compile Include="ExceptionSamples\GggNotSupportedExceptionIntTests.cs" />
-    <Compile Include="FileSamples\GggFileSamples.cs" />
-    <Compile Include="FileSamples\GggFileSamplesIntTests.cs" />
-    <Compile Include="FileStreamSamples\GggFileStream.cs" />
-    <Compile Include="FileStreamSamples\GggFileStreamIntTests.cs" />
-    <Compile Include="SecuritySamples\hmacsha256\GggHMACSHA256Provider.cs" />
-    <Compile Include="SecuritySamples\hmacsha256\GggHmacsha256ProviderTests.cs" />
-    <Compile Include="SecuritySamples\hmacsha256\HMACSHA256example.cs" />
-    <Compile Include="SecuritySamples\hmacsha256\Hmacsha256SamplesTests.cs" />
-    <Compile Include="standard\datetime\ConvertingBetweenDatetimeAndOffset.cs" />
+    <Compile Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\AuthorizationRequiredException.cs" />
+    <Compile Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\AuthorizationRequiredExceptionTests.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Computers\BrandXComputer.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Factories\BrandXFactory.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Abstracts\Computer.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\ComputerAssembler.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Abstracts\ComputerFactory.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Computers\ConcreteComputer.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Factories\ConcreteComputerFactory.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\FactoryPatternTests.cs" />
+    <Compile Include="docs.microsoft.com\ExceptionDocs\FileUtilities.cs" />
+    <Compile Include="docs.microsoft.com\ExceptionDocs\GggNotSupportedException.cs" />
+    <Compile Include="docs.microsoft.com\ExceptionDocs\GggNotSupportedExceptionIntTests.cs" />
+    <Compile Include="docs.microsoft.com\FileSamples\GggFileSamples.cs" />
+    <Compile Include="docs.microsoft.com\FileSamples\GggFileSamplesIntTests.cs" />
+    <Compile Include="docs.microsoft.com\FileStreamSamples\GggFileStream.cs" />
+    <Compile Include="docs.microsoft.com\FileStreamSamples\GggFileStreamIntTests.cs" />
+    <Compile Include="docs.microsoft.com\SecuritySamples\hmacsha256\GggHMACSHA256Provider.cs" />
+    <Compile Include="docs.microsoft.com\SecuritySamples\hmacsha256\GggHmacsha256ProviderTests.cs" />
+    <Compile Include="docs.microsoft.com\SecuritySamples\hmacsha256\HMACSHA256example.cs" />
+    <Compile Include="docs.microsoft.com\SecuritySamples\hmacsha256\Hmacsha256SamplesTests.cs" />
+    <Compile Include="docs.microsoft.com\standard\datetime\ConvertingBetweenDatetimeAndOffset.cs" />
     <Compile Include="Utilities\GggTestUtilities.cs" />
-    <Compile Include="HttpSamples\GggHttp.cs" />
-    <Compile Include="HttpSamples\GggHttpIntTests.cs" />
+    <Compile Include="docs.microsoft.com\HttpSamples\GggHttp.cs" />
+    <Compile Include="docs.microsoft.com\HttpSamples\GggHttpIntTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SerializationSamples\SerializableAttributeSample.cs" />
-    <Compile Include="SerializationSamples\SerializableAttributeSampleIntTests.cs" />
-    <Compile Include="SerializationSamples\TestSimpleObject.cs" />
+    <Compile Include="docs.microsoft.com\SerializationSamples\SerializableAttributeSample.cs" />
+    <Compile Include="docs.microsoft.com\SerializationSamples\SerializableAttributeSampleIntTests.cs" />
+    <Compile Include="docs.microsoft.com\SerializationSamples\TestSimpleObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\ReadAsyncTest.txt">
@@ -85,8 +87,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="DesignPatterns\FactoryPattern\dotnettricksSample\README.md" />
-    <None Include="DesignPatterns\FactoryPattern\README.md" />
+    <None Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\README.md" />
+    <None Include="docs.microsoft.com\DesignPatterns\FactoryPattern\dotnettricksSample\README.md" />
+    <None Include="docs.microsoft.com\DesignPatterns\FactoryPattern\README.md" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
