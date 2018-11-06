@@ -47,6 +47,25 @@
   <ItemGroup>
     <Compile Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\AuthorizationRequiredException.cs" />
     <Compile Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\AuthorizationRequiredExceptionTests.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\BindingParameterCollection.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\ChannelFactory.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\ClientRuntime.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\Context.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\ContextManager.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\Endpoint.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\EndpointBehaviorAddCurrentContext.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\EndpointBehaviorAddUserSessionId.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\EndpointDispatcher.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\IClientChannel.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\IClientMessageInspector.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\IEndpointBehavior.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\IMyClientObject.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\Message.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\MessageHeader.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\MessageInspectorAddCurrentContext.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\MyNestedContext.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\MyNestedContextTests.cs" />
+    <Compile Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\ServiceEndpoint.cs" />
     <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Computers\BrandXComputer.cs" />
     <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Factories\BrandXFactory.cs" />
     <Compile Include="docs.microsoft.com\DesignPatterns\FactoryPattern\msdnSample\Abstracts\Computer.cs" />
@@ -88,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="blogs.msdn.microsoft.com\agileer\custom-exception-class\README.md" />
+    <None Include="docs.microsoft.com\DesignPatterns\AmbientContextPattern\aabs.wordpress.com\theAmbientContextDesignPattern\README.md" />
     <None Include="docs.microsoft.com\DesignPatterns\FactoryPattern\dotnettricksSample\README.md" />
     <None Include="docs.microsoft.com\DesignPatterns\FactoryPattern\README.md" />
     <None Include="packages.config" />
