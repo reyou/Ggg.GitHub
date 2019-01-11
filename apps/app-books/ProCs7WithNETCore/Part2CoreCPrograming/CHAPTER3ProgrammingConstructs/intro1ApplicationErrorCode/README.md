@@ -1,0 +1,4 @@
+```
+cd <currentFolder>
+SimpleCSharpApp.bat
+```
