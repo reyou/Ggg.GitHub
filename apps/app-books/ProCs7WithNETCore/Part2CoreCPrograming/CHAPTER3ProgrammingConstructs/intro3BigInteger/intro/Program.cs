@@ -18,6 +18,8 @@ namespace intro
         static void UseBigInteger()
         {
             Console.WriteLine("=> Use BigInteger:");
+            // Represents an arbitrarily large signed integer.
+            // Converts the string representation of a number to its <see cref="T:System.Numerics.BigInteger" /> equivalent
             BigInteger biggy =
             BigInteger.Parse("9999999999999999999999999999999999999999999999");
             Console.WriteLine("Value of biggy is {0}", biggy);
