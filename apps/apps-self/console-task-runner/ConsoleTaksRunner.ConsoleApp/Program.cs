@@ -10,16 +10,17 @@ namespace ConsoleTaksRunner.ConsoleApp
         // ReSharper disable once FunctionRecursiveOnAllPaths
         public static void Main(string[] args)
         {
-            Console.WriteLine(@"Environment Settings:");
-            Console.WriteLine($"Application Environment: {applicationEnvironment}");
-            Console.WriteLine();
+            Guid guid = Guid.NewGuid();
             Console.WriteLine(@"Choose an option below:");
+            Console.WriteLine();
+            Console.WriteLine($"SessionId: {guid}");
+            Console.WriteLine($"Application Environment: {applicationEnvironment}");
             Console.WriteLine();
             // list options
             List<TestSuiteMethod> testRunOptions = TestRunManager.GetTestRunOptions(applicationEnvironment);
             foreach (TestSuiteMethod testRunOption in testRunOptions)
             {
-                Console.WriteLine($"{testRunOption.Order}- {testRunOption.Title}");
+                Console.WriteLine($"{testRunOption.Order}- {testRunOption.Title} ({testRunOption.Order})");
             }
             // pick an option
             string option = Console.ReadLine();
@@ -29,17 +30,26 @@ namespace ConsoleTaksRunner.ConsoleApp
             if (actionToRun == null)
             {
                 Console.WriteLine();
-                Console.WriteLine(@"Invalid option: {0}", option);
+                Console.WriteLine($"Invalid option: {option}");
                 Console.WriteLine();
             }
             else
             {
                 Console.WriteLine();
-                Console.WriteLine(@"Executing: {0}", actionToRun.Title);
+                Console.WriteLine($"===================================================");
+                Console.WriteLine($"Executing: {actionToRun.Order}- {actionToRun.Title}");
+                Console.WriteLine($"SessionId: {guid}");
+                Console.WriteLine($"===================================================");
                 Console.WriteLine();
                 try
                 {
                     actionToRun.TaskToRun.Invoke();
+                    Console.WriteLine();
+                    Console.WriteLine($"===================================================");
+                    Console.WriteLine($"Executed: {actionToRun.Order}- {actionToRun.Title}");
+                    Console.WriteLine($"SessionId: {guid}");
+                    Console.WriteLine($"===================================================");
+                    Console.WriteLine();
                 }
                 catch (Exception e)
                 {

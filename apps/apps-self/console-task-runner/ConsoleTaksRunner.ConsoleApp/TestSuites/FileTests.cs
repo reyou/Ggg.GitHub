@@ -15,6 +15,7 @@ namespace ConsoleTaksRunner.ConsoleApp.TestSuites
                     info.Name,
                     info.FullName,
                 });
+                TestUtilities.ThreadSleepSeconds(1, "ListFolders");
             }
         }
     }
