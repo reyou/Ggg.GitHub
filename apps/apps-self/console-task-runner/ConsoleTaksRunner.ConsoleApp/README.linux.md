@@ -1,4 +1,4 @@
-### install dotnet
+### install dotnet on linux
 
 ```
 $ sudo snap install dotnet-sdk --classic
